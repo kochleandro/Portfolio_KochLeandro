@@ -140,21 +140,19 @@ MEDIA_URL = "/imagenes/"
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
+import sys
+
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'filename': 'django_errors.log',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "stream": sys.stdout,
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
+    "root": {
+        "handlers": ["console"],
+        "level": "INFO",
     },
 }
