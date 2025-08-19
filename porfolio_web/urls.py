@@ -25,8 +25,10 @@ urlpatterns = [
     path('', include('portfolio.urls')),
     # path('about/', include('about.urls')),
     path('admin/', admin.site.urls),
+    path('', include('core.urls')),
 ]
 
+# Añade esto para desarrollo, aunque en producción Vercel maneja los estáticos
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

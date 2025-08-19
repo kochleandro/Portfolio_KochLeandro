@@ -8,11 +8,11 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 """
 
 import os
-
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'porfolio_web.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio_koch.settings')
 
-application = get_wsgi_application()
+app = get_wsgi_application()
 
-app = application
+# Para Vercel
+application = app
