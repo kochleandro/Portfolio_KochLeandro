@@ -28,7 +28,12 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True  # Cambia a True para depuración local
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['.vercel.app','localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "portfoliokochleandro.vercel.app",
+    "portfoliokochleandro-git-main-kochleandros-projects.vercel.app",
+]
 
 
 # Application definition
@@ -83,9 +88,10 @@ WSGI_APPLICATION = 'porfolio_web.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': ':memory:',
     }
 }
+
 
 
 # Password validation
