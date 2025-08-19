@@ -1,0 +1,72 @@
+<!-- HERENCIA DE BASE -->
+{% extends "core/base.html" %}
+
+<!-- CARGA LOS ESTATICOS -->
+{% load static %}
+
+<!-- TITULO DINAMICO -->
+{% block titulo %} ABOUT {% endblock titulo %}
+
+<!-- ARCHIVOS ESTATICOS EXTRA -->
+{% block extra_css %}{% endblock extra_css %}
+
+<!-- CONTENIDO PRINCIPAL -->
+{% block contenido_principal %}
+<section class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <div class="container" style="text-align: center;">
+        <div class="row d-flex">
+            <div class="col-4 offset-md-auto">
+                <img class="img-fluid img-thumbnail img-circle img-perfil "
+                    src="{% static 'core/img/leandro koch.jpeg' %}" alt="">
+            </div>
+            <div class="col-6 d-flex align-items-center">
+                <h4 class="w-100 text-center">Me apasiona crear soluciones innovadoras que aporten 
+                    valor a las empresas y a los usuarios.
+                </h4>
+            </div>
+        </div>
+
+        <div class="row d-flex pt-5">
+            <div class="col-12">
+                <h2 class="fw-bold">Formación Académica</h2>
+                <!-- CONTENIDO CURSOS -->
+
+                {% for curso in cursos %}
+                <h3>{{ curso.institucion }}</h3>
+                <p><strong>Título obtenido:</strong> {{ curso.titulo }}</p>
+                <p><strong>Descripción:</strong> {{ curso.descipcion }}</p>
+                <hr>
+                {% empty %}
+
+                <h3>Aun no se cargaron las formaciones</h3>
+
+                <hr>
+                {% endfor %}
+                <h2 class="fw-bold">Habilidades</h2>
+
+                <section class="skills" id="skills">
+                    <div class="skills__container" id="skills">
+
+                        {% for habilidad in habilidades %}
+                        <div class="card__skills">
+                            <div class="skill__thumbnail">
+                                <img class="skill__logo" src="{{ habilidad.imagen.url }}" alt="{{ habilidad.titulo }}">
+                            </div>
+                            <div class="skill__texto">
+                                <p class="skill__titulo">{{ habilidad.titulo }}</p>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <h3>Aun no se cargaron las habilidades</h3>
+                        <hr>
+                        {% endfor %}
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock contenido_principal %}
+
+<!-- ARCHIVOS JS EXTRA -->
+{% block extra_js %}{% endblock extra_js %}

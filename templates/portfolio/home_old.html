@@ -1,0 +1,49 @@
+<!-- HERENCIA DE BASE -->
+{% extends "core/base.html" %}
+
+<!-- CARGA LOS ESTATICOS -->
+{% load static %}
+
+<!-- TITULO DINAMICO -->
+{% block titulo %} INICIO {% endblock titulo %}
+
+<!-- ARCHIVOS ESTATICOS EXTRA -->
+{% block extra_css %}{% endblock extra_css %}
+
+
+<!-- CONTENIDO PRINCIPAL -->
+{% block contenido_principal %}
+
+<section class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <div class="container" style="text-align: center;">
+        <h1 class="fw-lighter fst-italic px-5">Sitio web en Django de demostracion</h1>
+        <p>Este es un Web de demostracion dinámica en desarrollado con Django 4.2 y **Bootstrap 5, utilizando
+            Python 3.10.12. </p>
+    </div>
+</section>
+
+
+<section>
+    <section class="py-5" style="text-align: center;">
+        <div class="container" style="text-align: left;">
+            <h2>Características</h2>
+            <ul class="list-unstyled">
+                <li><strong>Diseño Responsivo</strong>: Adaptable a dispositivos móviles y de escritorio gracias a Bootstrap 5.</li>
+                <li><strong>Gestión de Contenidos</strong>: Administra tus proyectos y contenido fácilmente desde el panel de administración de Django.</li>
+            </ul>
+            <h2>Tecnologías Utilizadas</h2>
+            <ul class="list-unstyled">
+                <li><strong>Django 4.2</strong></li>
+                <li><strong>Bootstrap 5</strong></li>
+                <li><strong>Python 3.10.12</strong></li>
+                <li><strong>SQLite</strong> (base de datos por defecto, alternativas PostgreSQL, MySQL, etc.)</li>
+            </ul>
+        </div>
+    </section>
+</section>
+
+
+{% endblock contenido_principal %}
+
+<!-- ARCHIVOS JS EXTRA -->
+{% block extra_js %}{% endblock extra_js %}

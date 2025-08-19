@@ -1,0 +1,32 @@
+<!-- HERENCIA DE BASE -->
+{% extends "core/base.html" %}
+
+<!-- CARGA LOS ESTATICOS -->
+{% load static %}
+
+<!-- TITULO DINAMICO -->
+{% block titulo %} CONTACTO {% endblock titulo %}
+
+<!-- ARCHIVOS ESTATICOS EXTRA -->
+{% block extra_css %}{% endblock extra_css %}
+
+
+<!-- CONTENIDO PRINCIPAL -->
+{% block contenido_principal %}
+
+<section class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+  <div class="container" style="text-align: center;">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>¿Tienes un proyecto en mente o quieres conectar? "Escríbeme y conversemos"</p>
+        <br>
+        <p><b>Teléfono:</b> 221-5591869</p>
+        <p><b>E-mail:</b> <E-mail>kochleandro@gmail.com</E-mail></p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock contenido_principal %}
+
+<!-- ARCHIVOS JS EXTRA -->
+{% block extra_js %}{% endblock extra_js %}

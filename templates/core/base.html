@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+                           
+  _  __ __   ___ __ _
+ | |/ / _ \ / __| || |
+ | ' < (_) | (__| __ |
+ |_|\_\___/ \___|_||_|
+                      
+              
+  AVISO LEGAL: Este código HTML es propiedad intelectual del titular de esta página web.
+  Cualquier uso no autorizado, copia o reproducción, total o parcial, de este código será
+  considerado una violación de los derechos de autor y será perseguido legalmente. Si deseas
+  utilizar este código, por favor contáctanos y solicita nuestra autorización expresa. Gracias por respetar mi trabajo..
+
+-->
+<head>
+    <!-- CARGA LOS ARCHIVOS ESTATICOS -->
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="¿Buscas un Digital Specialist Freelance? Soy Leandro Koch y ayudo a empresas y emprendedores a crecer con soluciones digitales estratégicas. ¡Hablemos!">
+    <meta name="keywords" content="Digital Specialist, Freelance, Soluciones Digitales, SEO, Desarrollo Web">
+    <meta name="author" content="Leandro Koch">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="{% static 'core/img/favicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static "core/img/favicon.png" %}}" type="image/png">
+    <!-- Bootstrap 3.3.1 para toda la aplicación -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'core/css/app.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'core/css/nav.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'core/js/fancybox/jquery.fancybox.css' %}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWLS5D8RDH"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PWLS5D8RDH');
+    </script>
+    <!-- ARCHIVOS CSS EXTRA -->
+    {% block extra_css %}{% endblock extra_css %}
+
+    <title>{% block titulo %}{% endblock titulo %} - Porfolio Personal</title>
+</head>
+<body>
+    <header id="header_wrapper">
+        <div class="container">
+            <div class="header_box">
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="logo">
+                        <a href="#"><img src="{% static 'core/img/logotipo.png' %}" alt="logo de KL Portfolio" loading="lazy"></a>
+                    </div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="main-nav" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav" id="mainNav">
+                            <li class="active"><a href="{% url 'portfolio' %}" class="scroll-link">Home</a></li>
+                            <li><a href="#service" class="scroll-link">Skills</a></li>
+                            <li><a href="#aboutUs" class="scroll-link">Experiencia</a></li>
+                            <li><a href="#Portfolio" class="scroll-link">Proyectos</a></li>
+                            <li><a href="mailto:kochleandro@gmail.com?subject=Contacto%20desde%20tu%20portfolio" class="scroll-link">Contacto</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- CONTENIDO PRINCIPAL-->
+    <main>
+        <!-- CABECERA -->
+        <section class="hero_section top_cont_outer">
+            <!-- Video de fondo -->
+            <video autoplay muted loop playsinline>
+                <source src="{% static 'core/videos/movimiento.webm' %}" type="video/webm">
+                Tu navegador no soporta videos en HTML5.
+            </video>
+
+            <div class="hero_wrapper">
+                <div class="container">
+                    <div class="top_left_cont">
+                        <h1 style="font-size: 16px;">PORTFOLIO</h1>
+                        <h2>¡Hola! Soy Leandro Koch<br> <strong>DIGITAL SPECIALIST</strong></h2>
+                        <p>Me apasiona crear soluciones innovadoras que aporten valor a las empresas y a los usuarios</p>
+                        <div class="underline"></div>
+                        <!-- Redes Sociales -->
+                        <div class="social-links">
+                            <a href="https://github.com/kochleandro" target="_blank" class="social-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/koch-leandro-programador/" target="_blank" class="social-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://kochleandro.codesolution.com.ar/" target="_blank" class="social-btn">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                         <!-- Botones centrados -->
+                        <div class="mt-4">
+                            <a href="{% static 'core/docs/CV 2025 Leandro Koch.pdf' %}"
+                            title="Descargar CV"
+                            class="btn btn-outline-secondary btn-lg rounded-pill mb-2 text-white"
+                            style="border-color: rgba(128, 128, 128, 0.418); background-color: rgba(146, 146, 146, 0.241); color: aliceblue;"
+                            download>
+                            Descargar CV
+                            </a>
+                            <a href="mailto:kochleandro@gmail.com?subject=Contacto%20desde%20tu%20portfolio"
+                            class="btn btn-warning btn-lg rounded-pill mb-2">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENIDO -->
+                {% block contenido_principal %}
+                
+                {% endblock contenido_principal %} 
+        
+    </main>
+    <footer>
+        <div class="footer__redes">
+            <ul class="footer__lista">
+                <li class="footer__item">
+                    <a class="footer__icono" href="https://github.com/kochleandro" target="_blank"><i class="fab fa-github-square fa-1x"></i></a>
+                </li>
+
+                <li class="footer__item">
+                    <a class="footer__icono" href="https://www.linkedin.com/in/koch-leandro-programador/" target="_blank"><i class="fab fa-linkedin-in fa-1x"></i></a>
+                </li>
+
+                <li class="footer__item">
+                    <a class="footer__icono" href="https://kochleandro.codesolution.com.ar/" target="_blank"><i class="fab fa-facebook fa-1x"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__texto">
+            <p>LK &copy;2025</p>
+        </div>
+    </footer>
+    <!-- ARCHIVOS JS EXTRA -->
+    {% block extra_js %}{% endblock extra_js %}  
+    <!-- jQuery y Bootstrap 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'core/js/jquery-scrolltofixed.js' %}"></script>
+    <script src="{% static 'core/js/jquery.nav.js' %}"></script>
+    <script src="{% static 'core/js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'core/js/jquery.isotope.js' %}"></script>
+    <script src="{% static 'core/js/fancybox/jquery.fancybox.pack.js' %}"></script>
+    <script src="{% static 'core/js/wow.js' %}"></script>
+    <script src="{% static 'core/js/custom.js' %}"></script>
+</body>
+</html>

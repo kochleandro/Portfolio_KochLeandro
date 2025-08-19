@@ -1,0 +1,42 @@
+<!-- HERENCIA DE BASE -->
+{% extends "core/base.html" %}
+
+<!-- CARGA LOS ESTATICOS -->
+{% load static %}
+
+<!-- TITULO DINAMICO -->
+{% block titulo %} PORFOLIO {% endblock titulo %}
+
+<!-- ARCHIVOS ESTATICOS EXTRA -->
+{% block extra_css %}{% endblock extra_css %}
+
+
+<!-- CONTENIDO PRINCIPAL -->
+{% block contenido_principal %}
+<section class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <div class="container" style="text-align: center;">
+    {% for proyecto in proyectos %}
+        <!-- Proyecto -->
+        <div class="row project mb-5">  	
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid" src="{{ proyecto.imagen.url }}" alt="{{ proyecto.titulo }}">
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{ proyecto.titulo }}</h2>   
+            <p>{{ proyecto.descipcion }}</p>
+            <p><a href="{{ proyecto.link }}" target="_blank">Más información</a></p>
+            </div>
+        </div>
+    {% empty %}
+    <div class="row project mb-5">  	
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">Aun no se cargo experiencia</h2>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</section>
+{% endblock contenido_principal %}
+
+<!-- ARCHIVOS JS EXTRA -->
+{% block extra_js %}{% endblock extra_js %}
