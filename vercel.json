@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "porfolio_web/wsgi.py",
+      "src": "porfolio_koch/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "porfolio_koch/wsgi.py"
+    },
+    {
       "src": "/(.*)",
-      "dest": "porfolio_web/wsgi.py"
+      "dest": "porfolio_koch/wsgi.py"
     }
   ]
 }
