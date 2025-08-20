@@ -29,10 +29,11 @@ DEBUG = True  # Cambia a True para depuración local
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "portfoliokochleandro.vercel.app",
-    "portfoliokochleandro-git-main-kochleandros-projects.vercel.app",
+    'kochleandro.vercel.app',
+    'portfoliokochleandro-git-main-kochleandros-projects.vercel.app',
+    '.vercel.app',  # ← Esto permite TODOS los subdominios de vercel.app
+    'localhost',
+    '127.0.0.1',
 ]
 
 
