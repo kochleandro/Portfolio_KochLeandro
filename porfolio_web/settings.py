@@ -143,9 +143,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Always include the project-level `static/` so collectstatic picks up those files
-# even when DEBUG=False (required for manifest generation).
-STATICFILES_DIRS = [BASE_DIR / 'static']
+# Always include the project-level `static/` and the `media/` folder so collectstatic
+# picks up both static assets and media uploaded files. This allows whitenoise to
+# serve media files when deployed (useful for simple deployments like Vercel).
+STATICFILES_DIRS = [BASE_DIR / 'static', BASE_DIR / 'media']
 
 
 

@@ -85,7 +85,11 @@
         <div class="col-md-3">
           <div class="service_icon delay-03s animated wow zoomIn">
             <span>
-              <img class="skill__logo" src="{{ habilidad.imagen.url }}" alt="{{ habilidad.titulo }}">
+              {% if habilidad.imagen and habilidad.imagen.name %}
+                <img class="skill__logo" src="{% static habilidad.imagen.name %}" alt="{{ habilidad.titulo }}">
+              {% else %}
+                <img class="skill__logo" src="{{ habilidad.imagen.url }}" alt="{{ habilidad.titulo }}">
+              {% endif %}
             </span>
           </div>
           <div class="service_block">
