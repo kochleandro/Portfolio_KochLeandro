@@ -25,7 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True # Cambia a True para depuración local
+# Make DEBUG configurable via environment variable (uses python-decouple).
+# Default to True for local development when DEBUG is not set.
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = [
@@ -80,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'porfolio_web.wsgi.app'
+WSGI_APPLICATION = 'porfolio_web.wsgi.application'
 
 
 # Database
@@ -141,11 +143,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Para desarrollo local
-if DEBUG:
-    STATICFILES_DIRS = [BASE_DIR / 'static']
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Always include the project-level `static/` so collectstatic picks up those files
+# even when DEBUG=False (required for manifest generation).
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 
 
