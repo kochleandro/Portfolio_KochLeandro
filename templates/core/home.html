@@ -400,7 +400,11 @@
           <div class="col-lg-12 about-us">
             <div class="row">
               <div class="col-md-6">
-                <img style="width: 200px; float: right;" class="img-responsive" src="{{ proyecto.imagen.url }}" alt="{{ proyecto.titulo }}">
+                {% if proyecto.imagen and proyecto.imagen.name %}
+                  <img style="width: 200px; float: right;" class="img-responsive" src="{% static proyecto.imagen.name %}" alt="{{ proyecto.titulo }}">
+                {% else %}
+                  <img style="width: 200px; float: right;" class="img-responsive" src="{{ proyecto.imagen.url }}" alt="{{ proyecto.titulo }}">
+                {% endif %}
               </div>
               <!-- /.col-md-6 -->
               <div class="col-md-6">
