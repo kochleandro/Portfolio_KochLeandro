@@ -177,12 +177,3 @@ LOGGING = {
         "level": "INFO",
     },
 }
-
-
-# from whitenoise.storage import CompressedManifestStaticFilesStorage
-
-# class CustomStaticFilesStorage(CompressedManifestStaticFilesStorage):
-#     def url(self, *args, **kwargs):
-#         # Tu solución para manejar espacios
-#         url = super().url(*args, **kwargs)
-#         return url.replace(' ', '%20')
