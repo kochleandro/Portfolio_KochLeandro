@@ -20,7 +20,281 @@
 <!-- CONTENIDO PRINCIPAL -->
 {% block contenido_principal %}
 
+<!-- Portfolio -->
+<section id="Portfolio" class="content">
+  <!-- Container -->
+  <div class="container portfolio_title">
+    <!-- Title -->
+    <div class="section-title">
+      <h2>Proyectos</h2>
+      <h6>Explora algunos de los proyectos en los que he trabajado, combinando diseño, desarrollo y optimización para crear soluciones efectivas y atractivas</h6>
+    </div>
+    <!--/Title -->
+  </div>
+  <!-- Container -->
+  <div class="portfolio-top"></div>
+  <!-- Portfolio Filters -->
+  <div class="Portfolio"> 
+    <div id="filters" class="sixteen columns">
+      <ul class="clearfix">
+        <li><a id="all" href="#" data-filter="*" class="active"><h5>Todo</h5></a></li>
+        <li><a class="" href="#" data-filter=".web"><h5>WEB</h5></a></li>
+        {% comment %} <li><a class="" href="#" data-filter=".Node"><h5>Webs - Node.js</h5></a></li> {% endcomment %}
+        <li><a class="" href="#" data-filter=".Django"><h5>Django</h5></a></li> 
+        <li><a class="" href="#" data-filter=".Python"><h5>Python</h5></a></li>
+        
+      </ul>
+    </div>
+    <!--/Portfolio Filters --> 
+    <!-- Portfolio Wrapper -->
+    <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
+      <!--/Portfolio Item -->  
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/Facontenedores.webp' %}" alt="Portfolio 1"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://facontenedores.com/" class="fancybox"> 
+              <h2><span>Facontenedores</span></h2>
+              <p>Diseño Web</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!--/Portfolio Item -->  
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/Grupo_paolo.webp' %}" alt="Portfolio 1"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://grupopaolo.com.ar/" class="fancybox"> 
+              <h2><span>GrupoPaolo</span></h2>
+              <p>Diseño Web</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!--/Portfolio Item -->  
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/inmoviliaria_fischer.webp' %}" alt="Portfolio 1"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://fischerpropiedades.com.ar/" class="fancybox"> 
+              <h2><span>INMOBILIARIA</span></h2>
+              <p>Diseño Web</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item --> 
+      <!--/Portfolio Item -->  
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/Sou_medicina.webp' %}" alt="Portfolio 1"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://soulmedicina.com.ar/" class="fancybox"> 
+              <h2><span>SoulMedicina</span></h2>
+              <p>Diseño Web</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!--/Portfolio Item -->  
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/DivasFlores.webp' %}" alt="Portfolio 1"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="//divasflores.com.ar/" class="fancybox"> 
+              <h2><span>DivasFlores</span></h2>
+              <p>Diseño Web</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->  
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/AI-in-higher-education.webp' %}" alt="Portfolio 1"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://github.com/kochleandro" class="fancybox"> 
+              <h2><span>Tensorflow</span></h2>
+              <p>Modelos de IA/AA con Tensorflow</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four Django isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/Python-y-Django-Herramientas-esenciales-para-el-desarrollo-web-moderno.webp' %}" alt="Portfolio 2"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://github.com/kochleandro/Polls-app.git" class="fancybox"> 
+              <h2><span>Polls-App</span></h2>
+              <p>Codigo - Django</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/prediccion_del_valor_del_dolar.webp' %}" alt="Portfolio 3"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://github.com/kochleandro/Dolar-Pyton/blob/main/Dolar.ipynb" class="fancybox"> 
+              <h2><span>Predicción</span></h2>
+              <p>Predicción del dólar con Machine Learning</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four Django isotope-item effect-oscar">
+        <div class="portfolio_img"> 
+          <img src="{% static 'core/img/web_django.webp' %}" alt="Portfolio 4"> 
+        </div> 
+        <figcaption>    
+          <div>
+            <a href="https://github.com/kochleandro/Web_Demostracion_Django.git" class="fancybox"> 
+              <h2><span>Web Django</span></h2>
+              <p>Demostracion en Django 4.2 y Bootstrap 5, Python 3.10.12</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
+        <div class="portfolio_img"> <img src="{% static 'core/img/tensor-flow-scaled.webp' %}" alt="Portfolio 5"> </div>
+        <figcaption>    
+          <div>
+            <a href="./celsius-fahrenheit/index.html" class="fancybox"> 
+              <h2><span>IA</span></h2>
+              <p>Modelos de IA/AA en JavaScript</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
+        <div class="portfolio_img"> <img src="{% static 'core/img/chatbots_jp_1-1.webp' %}" alt="Portfolio 6"> </div>
+        <figcaption>    
+          <div>
+            <a href="https://github.com/kochleandro/ChatBot-Pyton/blob/main/ChatBot.ipynb" class="fancybox"> 
+              <h2><span>ChatBot</span></h2>
+              <p>ChatBot con procesamiento de lenguaje natural.</p>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/ecommerce_(2).webp' %}" alt="Portfolio 7"> </div>
+        <figcaption>    
+          <div>
+            <a href="./Ejemplo_proyectos/ecommerce_(2).webp" class="fancybox"> 
+              <h2><span>E-commerce</span></h2>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/landing_page-_elspacio.net.webp' %}" alt="Portfolio 8"> </div>
+        <figcaption>    
+          <div>
+            <a href="https://elspacio.net/" class="fancybox"> 
+              <h2><span>Landing Page</span></h2>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/landing_page.webp' %}" alt="Portfolio 9"> </div>
+        <figcaption>    
+          <div>
+            <a href="https://divasflores.com.ar/" class="fancybox"> 
+              <h2><span>E-commerce</span></h2>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/Lavanderia_Industrial.webp' %}" alt="Portfolio 10"> </div>
+        <figcaption>    
+          <div>
+            <a href="https://lawasheria.com/" class="fancybox"> 
+              <h2><span>Lavandería</span></h2>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+  <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/Forn_de_Paletes_.webp' %}" alt="Portfolio 11"> </div>       
+        <figcaption>    
+          <div>
+            <a href="https://forndepaletes.es/" class="fancybox"> 
+              <h2><span>Web Basica</span></h2>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+      <!-- Portfolio Item -->
+      <figure class="portfolio-item one-four web isotope-item effect-oscar">
+        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/SERVJUCA_SL_.webp' %}" alt="Portfolio 12"> </div>       
+        <figcaption>    
+          <div>
+            <a href="https://servjuca.es/" class="fancybox"> 
+              <h2><span>Web Basica</span></h2>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <!--/Portfolio Item -->
+    </div>
+    <!--/Portfolio Wrapper --> 
+  </div>
+  <!--/Portfolio Filters -->
+  <div class="portfolio_btm"></div>
+  
+  
+  <div id="project_container">
+    <div class="clear"></div>
+    <div id="project_data"></div>
+  </div>
 
+</section>
+<!--/Portfolio --> 
 <!--Service-->
 <section id="service">
 <!-- Resto del contenido original -->
@@ -192,6 +466,18 @@
   <div class="container">
     <h2 style="color: black;">Stack en Programacion</h2>
     <h6 style="color: black;">Conjunto de herramientas y lenguajes que empleo en el desarrollo de software de alto rendimiento.</h6>
+        <!-- Mensaje de mantenimiento -->
+        <div class="alert alert-warning text-center" role="alert" >
+          <h4>Esta pagina utiliza las siguientes tecnologías</h4>
+            <div class="tech-icons">
+                <img src="{% static 'core/iconos/Django_Logo.png' %}" alt="Django" style="height: 30px; margin: 0 5px;">
+                <img src="{% static 'core/iconos/Python_Logo.png' %}" alt="Python" style="height: 30px; margin: 0 5px;">
+                <img src="{% static 'core/iconos/JavaScript_Logo.png' %}" alt="JavaScript" style="height: 30px; margin: 0 5px;">
+            </div>
+            <p class="alert alert-warning text-center" style="margin: 2vh 3vw ;">Este sitio web es un portfolio personal dinámico, desarrollado con Django 4.2 sobre Python 3.10.12, utilizando SQLite como base de datos ligera.<br> Su frontend es completamente responsivo gracias a Bootstrap 5, y está construido con HTML,
+              CSS y JavaScript. Además, incluye un panel de administración para gestionar los contenidos y proyectos de forma ágil.</p> 
+        </div>
+    <!-- Fin mensaje de mantenimiento -->
     <div class="service_wrapper">
       <div class="row">
         <div class="col-md-3">
@@ -280,7 +566,6 @@
         </div>
       </div>
     </div>
-
   </div>
   <div class="text-center">
     <div class=”col-md-12 text-center data-iframe-width="350" data-iframe-height="240" data-share-badge-id="a7738258-48ad-458d-8fae-46722eac918c" data-share-badge-host="https://www.credly.com"></div>
@@ -410,218 +695,6 @@
 </section>
 <!--Aboutus--> 
 
-<!-- Portfolio -->
-<section id="Portfolio" class="content">
-  <!-- Container -->
-  <div class="container portfolio_title">
-    <!-- Title -->
-    <div class="section-title">
-      <h2>Proyectos</h2>
-      <h6>Explora algunos de los proyectos en los que he trabajado, combinando diseño, desarrollo y optimización para crear soluciones efectivas y atractivas</h6>
-    </div>
-    <!--/Title -->
-  </div>
-  <!-- Container -->
-  <div class="portfolio-top"></div>
-  <!-- Portfolio Filters -->
-  <div class="Portfolio"> 
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a id="all" href="#" data-filter="*" class="active"><h5>Todo</h5></a></li>
-        <li><a class="" href="#" data-filter=".Node"><h5>Webs - Node.js</h5></a></li>
-        <li><a class="" href="#" data-filter=".Django"><h5>Django</h5></a></li> 
-        <li><a class="" href="#" data-filter=".Python"><h5>Python</h5></a></li>
-        <li><a class="" href="#" data-filter=".web"><h5>WEB</h5></a></li>
-      </ul>
-    </div>
-    <!--/Portfolio Filters --> 
-    <!-- Portfolio Wrapper -->
-    <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">  
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
-        <div class="portfolio_img"> 
-          <img src="{% static 'core/img/AI-in-higher-education.webp' %}" alt="Portfolio 1"> 
-        </div> 
-        <figcaption>    
-          <div>
-            <a href="./deteccion_tensorflow/index.html" class="fancybox"> 
-              <h2><span>Tensorflow</span></h2>
-              <p>Modelos de IA/AA con Tensorflow</p>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four Django isotope-item effect-oscar">
-        <div class="portfolio_img"> 
-          <img src="{% static 'core/img/Python-y-Django-Herramientas-esenciales-para-el-desarrollo-web-moderno.webp' %}" alt="Portfolio 2"> 
-        </div> 
-        <figcaption>    
-          <div>
-            <a href="https://github.com/kochleandro/Polls-app.git" class="fancybox"> 
-              <h2><span>Polls-App</span></h2>
-              <p>Codigo - Django</p>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
-        <div class="portfolio_img"> 
-          <img src="{% static 'core/img/prediccion_del_valor_del_dolar.webp' %}" alt="Portfolio 3"> 
-        </div> 
-        <figcaption>    
-          <div>
-            <a href="https://github.com/kochleandro/Dolar-Pyton/blob/main/Dolar.ipynb" class="fancybox"> 
-              <h2><span>Predicción</span></h2>
-              <p>Predicción del dólar con Machine Learning</p>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four Django isotope-item effect-oscar">
-        <div class="portfolio_img"> 
-          <img src="{% static 'core/img/web_django.webp' %}" alt="Portfolio 4"> 
-        </div> 
-        <figcaption>    
-          <div>
-            <a href="https://github.com/kochleandro/Web_Demostracion_Django.git" class="fancybox"> 
-              <h2><span>Web Django</span></h2>
-              <p>Demostracion en Django 4.2 y Bootstrap 5, Python 3.10.12</p>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="{% static 'core/img/tensor-flow-scaled.webp' %}" alt="Portfolio 5"> </div>
-        <figcaption>    
-          <div>
-            <a href="./celsius-fahrenheit/index.html" class="fancybox"> 
-              <h2><span>IA</span></h2>
-              <p>Modelos de IA/AA en JavaScript</p>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four Python isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="{% static 'core/img/chatbots_jp_1-1.webp' %}" alt="Portfolio 6"> </div>
-        <figcaption>    
-          <div>
-            <a href="https://github.com/kochleandro/ChatBot-Pyton/blob/main/ChatBot.ipynb" class="fancybox"> 
-              <h2><span>ChatBot</span></h2>
-              <p>ChatBot con procesamiento de lenguaje natural.</p>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/ecommerce_(2).webp' %}" alt="Portfolio 7"> </div>
-        <figcaption>    
-          <div>
-            <a href="./Ejemplo_proyectos/ecommerce_(2).webp" class="fancybox"> 
-              <h2><span>E-commerce</span></h2>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/landing_page-_elspacio.net.webp' %}" alt="Portfolio 8"> </div>
-        <figcaption>    
-          <div>
-            <a href="https://elspacio.net/" class="fancybox"> 
-              <h2><span>Landing Page</span></h2>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/Lavanderia_Industrial.webp' %}" alt="Portfolio 9"> </div>
-        <figcaption>    
-          <div>
-            <a href="https://divasflores.com.ar/" class="fancybox"> 
-              <h2><span>E-commerce</span></h2>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/landing_page.webp' %}" alt="Portfolio 10"> </div>
-        <figcaption>    
-          <div>
-            <a href="https://lawasheria.com/" class="fancybox"> 
-              <h2><span>Web Basica</span></h2>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four web isotope-item effect-oscar">
-  <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/Forn_de_Paletes_.webp' %}" alt="Portfolio 11"> </div>       
-        <figcaption>    
-          <div>
-            <a href="https://forndepaletes.es/" class="fancybox"> 
-              <h2><span>Web Basica</span></h2>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-      <!-- Portfolio Item -->
-      <figure class="portfolio-item one-four web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="{% static 'core/Ejemplo_proyectos/SERVJUCA_SL_.webp' %}" alt="Portfolio 12"> </div>       
-        <figcaption>    
-          <div>
-            <a href="https://servjuca.es/" class="fancybox"> 
-              <h2><span>Web Basica</span></h2>
-            </a>
-          </div>
-        </figcaption>
-      </figure>
-      <!--/Portfolio Item -->
-    </div>
-    <!--/Portfolio Wrapper --> 
-  </div>
-  <!--/Portfolio Filters -->
-  <div class="portfolio_btm"></div>
-  
-  
-  <div id="project_container">
-    <div class="clear"></div>
-    <div id="project_data"></div>
-  </div>
-
-<!-- Mensaje de mantenimiento -->
-<div class="alert alert-warning text-center" role="alert" style="background-color: #f9f9f9;  padding: 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    <h4>Este proyecto utiliza las siguientes tecnologías:</h4>
-    <div class="tech-icons">
-        <img src="{% static 'core/iconos/Django_Logo.png' %}" alt="Django" style="height: 30px; margin: 0 5px;">
-        <img src="{% static 'core/iconos/Python_Logo.png' %}" alt="Python" style="height: 30px; margin: 0 5px;">
-        <img src="{% static 'core/iconos/JavaScript_Logo.png' %}" alt="JavaScript" style="height: 30px; margin: 0 5px;">
-    </div>
-    <p class="alert alert-warning text-center" style="margin: 2vh 3vw ;">Este sitio web es un portfolio personal dinámico, desarrollado con Django 4.2 sobre Python 3.10.12, utilizando SQLite como base de datos ligera.<br> Su frontend es completamente responsivo gracias a Bootstrap 5, y está construido con HTML,
-       CSS y JavaScript. Además, incluye un panel de administración para gestionar los contenidos y proyectos de forma ágil.</p> 
-</div>
-<!-- Fin mensaje de mantenimiento -->
-
-</section>
-<!--/Portfolio --> 
 {% endblock contenido_principal %}
 {% block extra_js %}
 {% endblock extra_js %}
