@@ -66,7 +66,7 @@ h6 {
     color: #888888;                      /* Gris para texto secundario */
     font-weight: 400;                    /* Peso normal para mejor legibilidad */
     text-align: center;
-    margin: 0 0 60px 0;                  /* Amplio espacio inferior para separar secciones */
+    margin: 0 0 10px 0;                  /* Amplio espacio inferior para separar secciones */
 }
 body {
     font-family: 'Signika', sans-serif;
