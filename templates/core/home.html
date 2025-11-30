@@ -714,6 +714,66 @@
     <div class="container">
       <h2 style="color: white;">Experiencia</h2>
       <h6>Un recorrido por mi experiencia, destacando habilidades, tecnologías y proyectos que han marcado mi crecimiento profesional.</h6>
+      {% for proyecto in proyectos %}
+      <div class="inner_section">
+        <div class="row">
+          <div class="col-lg-12 about-us">
+            <div class="row">
+              <div class="col-md-6">
+                {% if proyecto.imagen and proyecto.imagen.name %}
+                  <img style="width: 200px; float: right;" class="img-responsive" src="{% static proyecto.imagen.name %}" alt="{{ proyecto.titulo }}">
+                {% else %}
+                  <img style="width: 200px; float: right;" class="img-responsive" src="{{ proyecto.imagen.url }}" alt="{{ proyecto.titulo }}">
+                {% endif %}
+              </div>
+              <!-- /.col-md-6 -->
+              <div class="col-md-6">
+                <h3 style="color: white;">{{ proyecto.titulo }}</h3>
+                <p style="color: white;">{{ proyecto.descipcion }}</p>
+                {% if proyecto.link %}
+                <p><a href="{{ proyecto.link }}" target="_blank" class="btn btn-primary">Ver Proyecto</a></p>
+                {% endif %}
+              </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+          </div><!-- /.col-lg-12 -->
+        </div>
+      </div>
+      {% empty %}
+      <div class="inner_section">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="text-center" style="color: white;">Aún no hay proyectos cargados</h2>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="inner_section">
+        <div class="row ">
+          <div class="col-lg-12 about-us">
+            <div class="row">
+              <div class="col-md-6"> <img style="width: 200px; float: right;" class="img-responsive" src="{% static 'core/iconos/OH-Logo-.png' %}" alt="OH"> </div>
+              <!-- /.col-md-6 -->
+              <div class="col-md-6">
+                <h3 style="color: white;">Desarrollador Web & Especialista en SEO</h3>
+                <p style="color: white;">
+                  En OH Marketing y Publicidad Digital, brindo servicios de desarrollo web, migración de sitios,
+                  optimización SEO y estrategias de publicidad digital. Me especializo en la creación de landing pages, sitios
+                  corporativos y e-commerce en WordPress, asegurando una experiencia optimizada para los usuarios. Además, 
+                  implemento estrategias de SEO  para mejorar la visibilidad online, velocidad, accesibilidad y
+                  configuro Google My Business para potenciar el posicionamiento local.
+                </p>
+                <!-- <p>
+                  Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum gravida tortor orci ipsum
+                  gravida tortor.
+                </p> -->
+                <ul class="about-us-list">
+                  <li class="points">WordPress | WooCommerce | SEO Técnico | Google Ads | Seguridad Web | Migraciones</li>
+                </ul><!-- /.about-us-list -->
+              </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+          </div><!-- /.col-lg-12 -->
+        </div>
+      </div>
       <div class="inner_section">
         <div class="row ">
           <div class="col-lg-12 about-us">
@@ -765,66 +825,6 @@
           </div><!-- /.col-lg-12 -->
         </div>
       </div>
-      <div class="inner_section">
-        <div class="row ">
-          <div class="col-lg-12 about-us">
-            <div class="row">
-              <div class="col-md-6"> <img style="width: 200px; float: right;" class="img-responsive" src="{% static 'core/iconos/OH-Logo-.png' %}" alt="OH"> </div>
-              <!-- /.col-md-6 -->
-              <div class="col-md-6">
-                <h3 style="color: white;">Desarrollador Web & Especialista en SEO</h3>
-                <p style="color: white;">
-                  En OH Marketing y Publicidad Digital, brindo servicios de desarrollo web, migración de sitios,
-                  optimización SEO y estrategias de publicidad digital. Me especializo en la creación de landing pages, sitios
-                  corporativos y e-commerce en WordPress, asegurando una experiencia optimizada para los usuarios. Además, 
-                  implemento estrategias de SEO  para mejorar la visibilidad online, velocidad, accesibilidad y
-                  configuro Google My Business para potenciar el posicionamiento local.
-                </p>
-                <!-- <p>
-                  Lorem ipsum dolor sit amet, consectetur Morbi sagittis, sem quisci ipsum gravida tortor orci ipsum
-                  gravida tortor.
-                </p> -->
-                <ul class="about-us-list">
-                  <li class="points">WordPress | WooCommerce | SEO Técnico | Google Ads | Seguridad Web | Migraciones</li>
-                </ul><!-- /.about-us-list -->
-              </div><!-- /.col-md-6 -->
-            </div><!-- /.row -->
-          </div><!-- /.col-lg-12 -->
-        </div>
-      </div>
-      {% for proyecto in proyectos %}
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-12 about-us">
-            <div class="row">
-              <div class="col-md-6">
-                {% if proyecto.imagen and proyecto.imagen.name %}
-                  <img style="width: 200px; float: right;" class="img-responsive" src="{% static proyecto.imagen.name %}" alt="{{ proyecto.titulo }}">
-                {% else %}
-                  <img style="width: 200px; float: right;" class="img-responsive" src="{{ proyecto.imagen.url }}" alt="{{ proyecto.titulo }}">
-                {% endif %}
-              </div>
-              <!-- /.col-md-6 -->
-              <div class="col-md-6">
-                <h3 style="color: white;">{{ proyecto.titulo }}</h3>
-                <p style="color: white;">{{ proyecto.descipcion }}</p>
-                {% if proyecto.link %}
-                <p><a href="{{ proyecto.link }}" target="_blank" class="btn btn-primary">Ver Proyecto</a></p>
-                {% endif %}
-              </div><!-- /.col-md-6 -->
-            </div><!-- /.row -->
-          </div><!-- /.col-lg-12 -->
-        </div>
-      </div>
-      {% empty %}
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="text-center" style="color: white;">Aún no hay proyectos cargados</h2>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
     </div>
   </div>
 </section>
