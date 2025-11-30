@@ -29,14 +29,28 @@ SECRET_KEY = config('SECRET_KEY')
 # Default to True for local development when DEBUG is not set.
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS: start with common known hosts, but allow extending via
+# environment variable `ALLOWED_HOSTS` (comma-separated). This lets Vercel
+# set the custom domain without editing source.
 ALLOWED_HOSTS = [
     'kochleandro.vercel.app',
     'portfoliokochleandro-git-main-kochleandros-projects.vercel.app',
-    '.vercel.app',  # ← Esto permite TODOS los subdominios de vercel.app
+    '.vercel.app',  # ← permite TODOS los subdominios de vercel.app
+    'www.leandrokochdev.com',
+    'leandrokochdev.com',
     'localhost',
     '127.0.0.1',
 ]
+
+# If an environment variable `ALLOWED_HOSTS` is provided (CSV), merge its
+# values into the list. Example: 'www.leandrokochdev.com,leandrokochdev.com'
+env_allowed = config('ALLOWED_HOSTS', default='')
+if env_allowed:
+    # split on commas and strip whitespace
+    extra = [h.strip() for h in env_allowed.split(',') if h.strip()]
+    for h in extra:
+        if h not in ALLOWED_HOSTS:
+            ALLOWED_HOSTS.append(h)
 
 
 # Application definition
