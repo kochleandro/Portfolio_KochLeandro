@@ -75,4 +75,7 @@ python manage.py migrate
 - **Web**: [Portfolio](https://leandrokochdev.com)
 - **GitHub**: [Telefonono](+542215591869)
 
+python manage.py collectstatic
+
+
 

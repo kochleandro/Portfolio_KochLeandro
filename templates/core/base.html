@@ -47,9 +47,143 @@
     <!-- ARCHIVOS CSS EXTRA -->
     {% block extra_css %}{% endblock extra_css %}
 
-    <!-- JSON-LD schema (referenciado en staticfiles) -->
-    <link rel="alternate" type="application/ld+json" href="{% static 'core/seo/schema.jsonld' %}">
-    <script type="application/ld+json" src="{% static 'core/seo/schema.jsonld' %}"></script>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+        "@type": "Person",
+        "@id": "https://www.leandrokochdev.com/#person",
+        "name": "Leandro Koch",
+        "alternateName": "LK - Digital Specialist",
+        "url": "https://www.leandrokochdev.com/",
+        "jobTitle": "Digital Specialist / Web Developer",
+        "email": "mailto:kochleandro@gmail.com",
+        "telephone": "+54 221 559 1869",
+        "image": "https://www.leandrokochdev.com/staticfiles/core/img/foto_perfil.jpg",
+        "sameAs": [
+            "https://github.com/kochleandro",
+            "https://www.linkedin.com/in/koch-leandro-programador/",
+            "https://leandrokochdev.com"
+        ],
+        "description": "Especialista en desarrollo web, WordPress, SEO, optimización, automatizaciones y proyectos en Django/Python.",
+        "knowsAbout": [
+            "Django",
+            "Python",
+            "Machine Learning",
+            "WordPress",
+            "Elementor",
+            "SEO técnico",
+            "Google Analytics 4",
+            "Diseño Web"
+        ]
+        },
+        {
+        "@type": "WebSite",
+        "@id": "https://www.leandrokochdev.com/#website",
+        "url": "https://www.leandrokochdev.com/",
+        "name": "LeandroKochDev | Portfolio Profesional",
+        "publisher": {
+            "@id": "https://www.leandrokochdev.com/#person"
+        },
+        "inLanguage": "es-AR"
+        },
+        {
+        "@type": "WebPage",
+        "@id": "https://www.leandrokochdev.com/#webpage",
+        "url": "https://www.leandrokochdev.com/",
+        "name": "Portfolio y Servicios de Desarrollo Web - Leandro Koch",
+        "description": "Servicios de desarrollo web, WordPress, SEO, automatizaciones y proyectos avanzados en Django/Python.",
+        "isPartOf": {
+            "@id": "https://www.leandrokochdev.com/#website"
+        }
+        },
+        {
+        "@type": "Service",
+        "@id": "https://www.leandrokochdev.com/#servicios",
+        "serviceType": "Desarrollo Web WordPress",
+        "provider": {
+            "@id": "https://www.leandrokochdev.com/#person"
+        },
+        "description": "Sitios web profesionales optimizados con WordPress + Elementor. SEO técnico incluido."
+        },
+        {
+        "@type": "Service",
+        "serviceType": "Desarrollo en Django / Python",
+        "provider": {
+            "@id": "https://www.leandrokochdev.com/#person"
+        },
+        "description": "Aplicaciones a medida, automatizaciones y APIs usando Django + Machine Learning."
+        },
+        {
+        "@type": "Service",
+        "serviceType": "Optimización SEO",
+        "provider": {
+            "@id": "https://www.leandrokochdev.com/#person"
+        },
+        "description": "Optimización técnica del sitio, velocidad y rankings en Google."
+        },
+        {
+        "@type": "Service",
+        "serviceType": "Mantenimiento Web",
+        "provider": {
+            "@id": "https://www.leandrokochdev.com/#person"
+        },
+        "description": "Actualizaciones, seguridad, performance y backups."
+        },
+        {
+        "@type": "ItemList",
+        "@id": "https://www.leandrokochdev.com/#portfolio",
+        "name": "Portfolio de Proyectos",
+        "itemListElement": [
+            {
+            "@type": "CreativeWork",
+            "name": "Dolardjango – Predicción de dólar con Machine Learning",
+            "url": "https://github.com/kochleandro/dolardjango",
+            "description": "Proyecto Django + RandomForest para predicción del dólar basado en datos históricos."
+            },
+            {
+            "@type": "CreativeWork",
+            "name": "Sitio WordPress Divas Flores",
+            "url": "https://divasflores.com.ar/",
+            "description": "Sitio de ecommerce optimizado con Elementor y SEO técnico."
+            }
+        ]
+        },
+        {
+        "@type": "FAQPage",
+        "@id": "https://www.leandrokochdev.com/#faq",
+        "mainEntity": [
+            {
+            "@type": "Question",
+            "name": "¿Hacés sitios en WordPress?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, desarrollo sitios optimizados con WordPress + Elementor con foco en velocidad y SEO."
+            }
+            },
+            {
+            "@type": "Question",
+            "name": "¿Desarrollás aplicaciones personalizadas?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, realizo aplicaciones web a medida usando Django, Python y Machine Learning."
+            }
+            },
+            {
+            "@type": "Question",
+            "name": "¿Trabajás con SEO?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, hago SEO técnico, optimización de velocidad, estructura y mejoras para Google."
+            }
+            }
+        ]
+        }
+    ]
+    }
+    </script>
+
 
     <title>{% block titulo %}{% endblock titulo %} - Porfolio Personal</title>
 </head>
