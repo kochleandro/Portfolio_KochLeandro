@@ -47,6 +47,10 @@
     <!-- ARCHIVOS CSS EXTRA -->
     {% block extra_css %}{% endblock extra_css %}
 
+    <!-- JSON-LD schema (referenciado en staticfiles) -->
+    <link rel="alternate" type="application/ld+json" href="{% static 'core/seo/schema.jsonld' %}">
+    <script type="application/ld+json" src="{% static 'core/seo/schema.jsonld' %}"></script>
+
     <title>{% block titulo %}{% endblock titulo %} - Porfolio Personal</title>
 </head>
 <body>
@@ -103,7 +107,7 @@
                             <a href="https://www.linkedin.com/in/koch-leandro-programador/" target="_blank" class="social-btn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://kochleandro.codesolution.com.ar/" target="_blank" class="social-btn">
+                            <a href="#" target="_blank" class="social-btn">
                                 <i class="fab fa-facebook"></i>
                             </a>
                         </div>

@@ -44,15 +44,35 @@ El sitio incluye las siguientes páginas:
 
 6. Y ya te funciona...
 
+# SUbida al repositorio
+1. Verifica en qué rama estás (probablemente "main")
+git branch
 
-## Licencia
+1. Agrega todos los cambios (incluido el settings.py modificado)
+git add .
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+2. Crea un commit con mensaje
+git commit -m "Detallar los cambios"
+
+3. Sube los cambios a GitHub
+git push origin main
+
+
+# El comando para crear una migración de modelos en Django es:
+
+Y para aplicar las migraciones a la base de datos:
+
+python manage.py makemigrations
+
+Y para aplicar las migraciones a la base de datos:
+
+python manage.py migrate
 
 ## Contacto
 
 - **Correo Electrónico**: kochleandro@gmail.com
 - **LinkedIn**: [Leandro koch](https://www.linkedin.com/in/koch-leandro-programador/)
-- **Web**: [Portfolio](https://kochleandro.codesolution.com.ar/)
+- **Web**: [Portfolio](https://leandrokochdev.com)
+- **GitHub**: [Telefonono](+542215591869)
 
 
